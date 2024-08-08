@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DashboardPage from "./pages/dahboard";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import theme from "@/style/main";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
               path="/"
               element={<DashboardPage />}
               // outlet={<DashboardPageLayout />}
-            ></Route>
+            >
+              <Route path="main" element={<HomePage />}></Route>
+            </Route>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

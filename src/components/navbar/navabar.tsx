@@ -16,13 +16,15 @@ import ListItemText from "@mui/material/ListItemText";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled, useTheme } from "@mui/system";
 import { LogoBuck } from "@/assets/images";
+import customStyle from "@/style/custom.style";
 
 const Logo = styled("div")({
-  backgroundColor: "pink",
+  backgroundColor: "white",
+  paddingTop: "6px",
   //   padding: "10px 20px",
   //   marginTop: "0.5rem",
   //   marginBottom: "0.1rem",
-  padding: "0px",
+  //   padding: "0px",
   textAlign: "center",
   borderRadius: "4px",
 });
@@ -66,7 +68,7 @@ const Navbar = () => {
           backgroundColor: "#694F8E",
           color: "white",
           paddingTop: "0.1rem",
-          //   paddingBottom: "0.2rem",
+          paddingBottom: "0.2rem",
           //   padding: "0.2rem",
         }}
       >
@@ -76,7 +78,7 @@ const Navbar = () => {
       </Box>
       <AppBar
         position="sticky"
-        color="transparent"
+        color="inherit"
         elevation={0}
         sx={{ borderBottom: "2px solid #7B5292", padding: "0px" }}
       >
