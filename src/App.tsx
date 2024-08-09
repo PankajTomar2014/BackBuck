@@ -20,7 +20,7 @@ function App() {
               element={<DashboardPage />}
               // outlet={<DashboardPageLayout />}
             >
-              <Route path="main" element={<HomePage />}></Route>
+              <Route path="/" element={<HomePage />}></Route>
               <Route path="shop" element={<EShopLayout />}></Route>
             </Route>
           </Routes>

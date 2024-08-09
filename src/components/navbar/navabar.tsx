@@ -17,7 +17,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { styled, useTheme } from "@mui/system";
 import { LogoBuck } from "@/assets/images";
 import customStyle from "@/style/custom.style";
-
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Logo = styled("div")({
   backgroundColor: "white",
   paddingTop: "6px",
@@ -49,6 +50,7 @@ const Navbar = () => {
   const theme = useTheme();
   const [showSearch, setShowSearch] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleSearchClick = () => {
@@ -137,7 +139,13 @@ const Navbar = () => {
                     sx={{ marginLeft: "70px" }}
                   >
                     <NavbarButton>ABOUT US</NavbarButton>
-                    <NavbarButton>PRODUCTS</NavbarButton>
+                    <NavbarButton
+                      onClick={() => {
+                        navigate("/shop");
+                      }}
+                    >
+                      PRODUCTS
+                    </NavbarButton>
                     <NavbarButton>SPECIALITY CAKES</NavbarButton>
                     <NavbarButton>FIND US</NavbarButton>
                     <NavbarButton>CONTACT US</NavbarButton>
