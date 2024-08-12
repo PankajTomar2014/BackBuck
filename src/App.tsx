@@ -7,6 +7,7 @@ import DashboardPage from "./pages/dahboard";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import theme from "@/style/main";
 import HomePage from "./pages/HomePage";
+import EShopLayout from "./pages/Shopping";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
               element={<DashboardPage />}
               // outlet={<DashboardPageLayout />}
             >
-              <Route path="main" element={<HomePage />}></Route>
+              <Route path="/" element={<HomePage />}></Route>
+              <Route path="shop" element={<EShopLayout />}></Route>
             </Route>
           </Routes>
         </BrowserRouter>
